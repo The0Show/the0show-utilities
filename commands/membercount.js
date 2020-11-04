@@ -5,9 +5,9 @@ module.exports = {
     guildOnly: true,
     cooldown: 5,
     execute(message, args) {
-        message.guild.members.fetch().then(fetchedMembers => {
-            message.channel.send(`There are currently ${fetchedMembers.size} members in this guild!`)
-        });
+        //message.guild.members.fetch().then(fetchedMembers => {
+        message.channel.send(`There are currently ${message.guild.members.fetch().size} members in this guild!`)
+        //});
         return
     }
 }
