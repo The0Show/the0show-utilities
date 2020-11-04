@@ -7,7 +7,7 @@ module.exports = {
     guildOnly: true,
     cooldown: 5,
     userPermissions: ['MANAGE_CHANNELS'],
-    execute(message, args) {
+    execute(message, args, client) {
         message.channel.setRateLimitPerUser(args[0])
         .then(() => {
             message.channel.send(`The slowmode was sucessfully set to ${args[0]} second(s).`)

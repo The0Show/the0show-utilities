@@ -9,7 +9,7 @@ module.exports = {
     args: true,
     usage: '<question>',
     cooldown: 5,
-    execute(message, args) {
+    execute(message, args, client) {
         const outcome = getRandomInt(20)
         if(outcome == 0){
             message.channel.send('It is certain.')

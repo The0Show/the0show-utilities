@@ -12,7 +12,7 @@ module.exports = {
     description: 'Who made this?!?',
     aliases: ['about', 'creator'],
     cooldown: 5,
-    execute(message, args) {
+    execute(message, args, client) {
         message.channel.send({ embed: credits })
     }
 }

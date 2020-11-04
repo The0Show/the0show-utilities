@@ -3,7 +3,7 @@ module.exports = {
     description: 'Ping!',
     aliases: ['test', 'pong'],
     cooldown: 5,
-    execute(message, args) {
+    execute(message, args, client) {
         message.channel.send('Pong!')
     }
 }

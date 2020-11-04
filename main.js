@@ -95,7 +95,7 @@ client.on('message', async message => {
     if(!message.member.hasPermission(command.userPermissions)) return message.reply('you don\'t have the required permissions to run this command!')
 
     try {
-	    command.execute(message, args);
+	    command.execute(message, args, client);
     } catch (error) {
 	    console.error(error);
 	    message.reply('there was an error trying to execute that command!\n```\n' + error + '\n```');
