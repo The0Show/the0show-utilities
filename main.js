@@ -29,6 +29,7 @@ const activities_list = [
     "nothing",
     "●_●",
     "(✌ﾟ∀ﾟ)☞",
+    "with my source code (https://github.com/The0Show/the0show-utilities btw)",
 ];
 
 client.once('ready', () => {
@@ -89,7 +90,9 @@ client.on('message', async message => {
 	}
 
 	timestamps.set(message.author.id, now);
-	setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
+    setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
+    
+    if(!message.member.hasPermission(command.userPermissions)) return message.reply('you don\'t have the required permissions to run this command!')
 
     try {
 	    command.execute(message, args);

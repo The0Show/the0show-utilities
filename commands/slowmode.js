@@ -5,6 +5,7 @@ module.exports = {
     args: true,
     usage: '<slowmode>',
     cooldown: 5,
+    userPermissions: ['MANAGE_CHANNELS'],
     execute(message, args) {
         message.channel.setRateLimitPerUser(args[0])
         .then(() => {
