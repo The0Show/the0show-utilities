@@ -4,7 +4,7 @@
  Info on how to use the code can be found [in the wiki](https://github.com/The0Show/the0show-utilities/wiki).
  
  Feel free to modify `credits.js`. Just make sure to not remove or modify `This bot is a fork of [**The0Show's Utilities**](https://github.com/The0Show/the0show-utilities).`
- 
+
  # FAQ
  Q: Can I use this for my bot?<br>A: Yes! You can use this for your bot. I recommend using the entire project. If you only use some parts of the code, please still credit me.
  
