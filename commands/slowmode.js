@@ -4,6 +4,7 @@ module.exports = {
     aliases: ['chatspeed', 'cooldown', 'channelratelimit'],
     args: true,
     usage: '<slowmode>',
+    guildOnly: true,
     cooldown: 5,
     userPermissions: ['MANAGE_CHANNELS'],
     execute(message, args) {
