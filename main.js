@@ -101,6 +101,10 @@ client.on('message', async message => {
 	    message.reply('there was an error trying to execute that command!\n```\n' + error + '\n```');
     }
 
+    client.on('rateLimit', () => {
+        console.log('I\'m getting ratelimited!')
+    })
+
 });
 
 client.login(token);
