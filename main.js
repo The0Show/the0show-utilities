@@ -5,13 +5,9 @@ const { prefix, token } = require('./config.json');
 client.commands = new Discord.Collection()
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
-var commandint = 0
-
 console.log('Loading Commands...')
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`)
-
-    var commandint = commandint + 1
 
     client.commands.set(command.name, command)
     console.log(`Loading ${command.name}...`)
@@ -33,7 +29,8 @@ const activities_list = [
 ];
 
 client.once('ready', () => {
-    client.user.setPresence({ activity: { name: `Loading ${commandint} Commands...` } }); // sets bot's activities to one of the phrases in the arraylist.
+    const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
+    client.user.setPresence({ activity: { name: (activities_list[index]) + ' | >help' }, status: 'dnd' }); // sets bot's activities to one of the phrases in the arraylist.
     console.log('Ready!');
     setInterval(() => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
